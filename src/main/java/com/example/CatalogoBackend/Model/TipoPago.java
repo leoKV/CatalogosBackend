@@ -12,11 +12,11 @@ public class TipoPago {
         this.aceptacion = aceptacion;
     }
     
-    public int getTipopagoid() {
+    public int getTipoPagoId() {
         return tipopagoid;
     }
 
-    public void setTipopagoid(int tipopagoid) {
+    public void setTipoPagoId(int tipopagoid) {
         this.tipopagoid = tipopagoid;
     }
 

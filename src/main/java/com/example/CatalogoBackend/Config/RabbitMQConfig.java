@@ -8,9 +8,9 @@ import org.springframework.context.annotation.Configuration;
 public class RabbitMQConfig {
 	//Exchange
     public static final String CATALOG_EXCHANGE = "catalog.exchange";
-	
-	@Bean
-	public Exchange catalogExchange() {
+
+    @Bean
+    Exchange catalogExchange() {
 		return new TopicExchange(CATALOG_EXCHANGE);
 	}
 }
