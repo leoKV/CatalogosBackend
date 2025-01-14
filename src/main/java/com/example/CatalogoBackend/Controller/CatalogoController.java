@@ -27,7 +27,7 @@ public class CatalogoController {
 	 public ResponseEntity<String> addCatalogAutomatically() {
 		 try {
 			 catalogoService.addCatalog();
-	         return ResponseEntity.status(HttpStatus.OK).body("Catálogo nuevo añadido y enviado correctamente.");
+	         return ResponseEntity.status(HttpStatus.OK).body("Catálogos Nuevos Añadidos - Lista Actualizada.");
 	     } catch (Exception e) {
 	         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
 	                .body("Ocurrió un error al añadir el catálogo: " + e.getMessage());
@@ -38,7 +38,7 @@ public class CatalogoController {
 	 public ResponseEntity<String> removeCatalogAutomatically() {
 		 try {
 	            catalogoService.removeCatalog();
-	            return ResponseEntity.status(HttpStatus.OK).body("Catálogo eliminado y lista actualizada.");
+	            return ResponseEntity.status(HttpStatus.OK).body("Catálogos Eliminados - Lista Actualizada.");
 	     } catch (Exception e) {
 	            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
 	                    .body("Ocurrió un error al eliminar el catálogo: " + e.getMessage());
