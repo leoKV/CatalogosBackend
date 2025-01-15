@@ -53,10 +53,12 @@ public class CatalogoService {
         tipoOperacionMap.put("TipoOperacion", tipoOperacionCatalog);
         catalogos.add(tipoOperacionMap);
         // Formatear las fechaOperacion
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        String fechaOperacionF = dateFormat.format(new Date());
+        SimpleDateFormat dateFormatOperacion = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat dateFormatActual = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        String fechaOperacionF = dateFormatOperacion.format(new Date());
+        String fechaActualF = dateFormatActual.format(new Date());
         //Retornar Catálogos
-        return new Catalogo(catalogos,fechaOperacionF, new Date().toString());
+        return new Catalogo(catalogos, fechaOperacionF, fechaActualF );
     }
     
     // Agregar un nuevo catálogo a cada tipo.
